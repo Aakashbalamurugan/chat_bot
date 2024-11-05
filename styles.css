@@ -1,0 +1,17 @@
+.chat-bubble {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    clear: both; /* Ensure new messages start on a new line */
+}
+
+.user .chat-bubble {
+    background-color: #DCF8C6; /* Light green for user */
+    float: right; /* Align user messages to the right */
+}
+
+.gemini .chat-bubble {
+    background-color: #fff; /* White for chatbot */
+    float: left; /* Align Gemini messages to the left */
+}
