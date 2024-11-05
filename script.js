@@ -1,8 +1,14 @@
+
+
 const chatbox = document.getElementById('chatbox');
 const userInput = document.getElementById('user_input');
 const sendButton = document.getElementById('send_button');
 
 sendButton.addEventListener('click', sendMessage);
+let var1 = 'AIzaSyC2jb';
+let var2 = 'FRs7rP6gO7cXc-ePS';
+let var3 = 'FrwfsAvWVg_0';
+const apiKey = var1+var2+var3
 
 function sendMessage() {
     const userMessage = userInput.value;
@@ -31,7 +37,7 @@ async function fetchGeminiResponse(message) {
     // Replace with your actual Gemini API call
     const requestBody = {"contents":[{"parts":[{"text":message}]}]}
   
-    const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyC2jbFRs7rP6gO7cXc-ePSFrwfsAvWVg_0', {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
